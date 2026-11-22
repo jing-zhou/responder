@@ -1,0 +1,8 @@
+app = "my-python-udp-test"
+
+[[services]]
+  internal_port = 9999
+  protocol = "udp"
+
+  [[services.ports]]
+    port = 9999
