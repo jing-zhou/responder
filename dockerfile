@@ -1,4 +1,4 @@
 FROM python:3.12-slim
 WORKDIR /app
-COPY main.py .
-CMD ["python3", "-u", "main.py"]
+COPY server.py .
+CMD ["python3", "-u", "server.py"]

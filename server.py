@@ -1,3 +1,4 @@
+import os
 import asyncio
 import signal
 
@@ -77,8 +78,9 @@ class UDPServerApp:
         self.run()
 
 
-# Top-level entry point
-app = UDPServerApp(host='0.0.0.0', port=9999)
+# Uses 'fly-global-services' on Fly.io, falls back to '0.0.0.0' locally
+bind_host = os.getenv("UDP_HOST", "0.0.0.0")
+app = UDPServerApp(host=bind_host, port=9999)
 
 if __name__ == "__main__":
     app.run()

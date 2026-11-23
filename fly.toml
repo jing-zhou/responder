@@ -1,4 +1,7 @@
-app = "udp-responder"
+app = "python-udp-server"
+
+[env]
+  UDP_HOST = "fly-global-services"
 
 [[services]]
   internal_port = 9999
