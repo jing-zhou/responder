@@ -1,4 +1,4 @@
-app = "my-python-udp-test"
+app = "udp-responder"
 
 [[services]]
   internal_port = 9999
